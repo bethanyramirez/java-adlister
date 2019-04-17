@@ -11,7 +11,7 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
-    private List<Ad> generateAds() {
+    public List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(
             1,
@@ -39,4 +39,5 @@ public class ListAdsDao implements Ads {
         ));
         return ads;
     }
+
 }
