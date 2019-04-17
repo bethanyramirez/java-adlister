@@ -5,8 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet(name = "HelloWorldServlet", urlPatterns = "/login")
+public class LoginServlet extends HttpServlet {
 
     int counter = 0;
 
@@ -14,12 +14,11 @@ public class HelloWorldServlet extends HttpServlet {
 
         counter++;
         String name = request.getParameter("name");
-        if(name == null) name = "World";
+        if (name == null) name = "World";
 
         request.setAttribute("name", name);
         request.setAttribute("count", counter);
-        request.getRequestDispatcher("/hello.jsp").forward(request, response);
-
+        request.getRequestDispatcher("/profile.jsp").forward(request, response);
 
     }
 }
