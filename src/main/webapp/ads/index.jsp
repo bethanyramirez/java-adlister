@@ -14,20 +14,21 @@
 </head>
 <body>
     <%@ include file="/partials/navbar.jsp"%>
-
-    <table class="table table-dark">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-        </tr>
-        </thead>
-        <c:forEach var="ad" items="${ads}">
-            <tr>
-                <td>${ad.title}</td>
-                <td>${ad.description}</td>
-            </tr>
-        </c:forEach>
-    </table>
+    <div class="container">
+        <table class="table table-dark">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <c:forEach var="ad" items="${ads}">
+                <tr>
+                    <td>${ad.title}</td>
+                    <td>${ad.description}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
 </body>
 </html>
